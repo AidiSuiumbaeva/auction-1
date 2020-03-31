@@ -1,5 +1,6 @@
 package kg.megacom.auction.models.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -17,7 +18,9 @@ public class Lot {
     private double minPrice;
     private double maxPrice;
     private double step;
+    @JsonFormat(pattern = "dd.MM.yyyy")
     private LocalDate startDate;
+    @JsonFormat(pattern = "dd.MM.yyyy")
     private LocalDate endDate;
 
 

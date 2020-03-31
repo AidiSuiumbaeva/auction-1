@@ -1,5 +1,6 @@
 package kg.megacom.auction.models.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -13,6 +14,7 @@ public class Bid {
     @GeneratedValue
     @Column(name = "bid_id")
     private Long id;
+    @JsonFormat(pattern = "dd.MM.yyyy")
     private LocalDate addDate;
     private double bidValue;
     private boolean active;
