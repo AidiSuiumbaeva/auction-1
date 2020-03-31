@@ -1,11 +1,7 @@
 package kg.megacom.auction.mappers;
 
-import kg.megacom.auction.models.dto.CustomerDto;
-import kg.megacom.auction.models.dto.StatusDto;
-import kg.megacom.auction.models.dto.UserDto;
-import kg.megacom.auction.models.entity.Customer;
-import kg.megacom.auction.models.entity.Status;
-import kg.megacom.auction.models.entity.User;
+import kg.megacom.auction.models.dto.*;
+import kg.megacom.auction.models.entity.*;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
@@ -21,4 +17,10 @@ public interface ClassMapper {
 
     User userDtoToUser(UserDto userDto);
     UserDto userToUserDto(User user);
+
+    Bid bidDtoToBid(BidDto bidDto);
+    BidDto bidToBidDto(Bid bid);
+
+    Lot lotDtoToLot(LotDto lotDto);
+    LotDto lotToLotDto(Lot lot);
 }
